@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JO KEN PO</title>
+</head>
+
+<body>
+    <div id="game" class="container">
+        <h1>
+            <img src="./assets/images/JOKENPO.png" alt="jokenpo">
+        </h1>
+        <div class="bloco">
+            <div class="label bg-green">VOCÊ</div>
+            <div class="label bg-red">PC</div>
+            <div id="contador" class="placar">0:0</div>
+        </div>
+        <div class="bloco bg-grey selected-image">
+            <div id="user">
+                <img src="./assets/images/rock.png">
+            </div>
+            <div id="pc" class="reverse"></div>
+        </div>
+        <h2>ESCOLHA SEU MOVIMENTO</h2>
+        <div class="buttons">
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="rock" checked>
+                <button class="btn"><img src="./assets/images/rock.png"></button>
+            </label>
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="paper" checked>
+                <button class="btn"><img src="./assets/images/paper.png"></button>
+            </label>
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="scissor" checked>
+                <button class="btn"><img src="./assets/images/scissor.png"></button>
+            </label>
+        </div>
+        <div class="bloco">
+            <button id="playing" class="btn-play">JOGAR</button>
+        </div>
+    </div>
+    <div id="winner" class="container end-screen none">
+        <h3>VOCÊ GANHOU!</h3>
+        <button onclick="newgame()">Jogar Novamente</button>
+        <img src="./assets/images/winner.png" alt="vencedor">
+    </div>
+    <div id="loser" class="container end-screen none">
+        <h3>VOCÊ PERDEU!</h3>
+        <button onclick="newgame()">Jogar Novamente</button>
+        <img src="./assets/images/loser.png" alt="perdedor">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
